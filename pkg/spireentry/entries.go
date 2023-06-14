@@ -61,6 +61,7 @@ func renderStaticEntry(spec *spirev1alpha1.ClusterStaticEntrySpec) (*spireapi.En
 		DNSNames:      spec.DNSNames,
 		Admin:         spec.Admin,
 		Downstream:    spec.Downstream,
+		Hint:          spec.Hint,
 	}, nil
 }
 
