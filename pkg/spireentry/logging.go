@@ -27,17 +27,18 @@ import (
 )
 
 const (
-	clusterSPIFFEIDLogKey = "clusterSPIFFEID"
-	namespaceLogKey       = "namespace"
-	podLogKey             = "pod"
-	idKey                 = "id"
-	parentIDKey           = "parentID"
-	spiffeIDKey           = "spiffeID"
-	selectorsKey          = "selectors"
-	federatesWithKey      = "federatesWith"
-	dnsNamesKey           = "dnsNames"
-	adminKey              = "admin"
-	downstreamKey         = "downstream"
+	clusterStaticEntryLogKey = "clusterStaticEntry"
+	clusterSPIFFEIDLogKey    = "clusterSPIFFEID"
+	namespaceLogKey          = "namespace"
+	podLogKey                = "pod"
+	idKey                    = "id"
+	parentIDKey              = "parentID"
+	spiffeIDKey              = "spiffeID"
+	selectorsKey             = "selectors"
+	federatesWithKey         = "federatesWith"
+	dnsNamesKey              = "dnsNames"
+	adminKey                 = "admin"
+	downstreamKey            = "downstream"
 )
 
 func objectName(o metav1.Object) string {
