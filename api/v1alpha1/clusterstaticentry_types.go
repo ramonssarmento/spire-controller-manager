@@ -31,7 +31,7 @@ type ClusterStaticEntrySpec struct {
 	FederatesWith []string        `json:"federatesWith"`
 	X509SVIDTTL   metav1.Duration `json:"x509SVIDTTL"`
 	JWTSVIDTTL    metav1.Duration `json:"jwtSVIDTTL"`
-	DNSNames      []string        `json:"dnsNameTemplates"`
+	DNSNames      []string        `json:"dnsNames"`
 	Hint          string          `json:"hint"`
 	Admin         bool            `json:"admin,omitempty"`
 	Downstream    bool            `json:"downstream,omitempty"`
