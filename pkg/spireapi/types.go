@@ -43,6 +43,7 @@ type Entry struct {
 	Admin         bool
 	Downstream    bool
 	DNSNames      []string
+	Hint          string
 }
 
 type Selector struct {
@@ -152,6 +153,7 @@ func entryToAPI(in Entry) *apitypes.Entry {
 		Admin:         in.Admin,
 		DnsNames:      in.DNSNames,
 		Downstream:    in.Downstream,
+		Hint:          in.Hint,
 	}
 }
 
@@ -201,6 +203,7 @@ func entryFromAPI(in *apitypes.Entry) (Entry, error) {
 		Admin:         in.Admin,
 		DNSNames:      in.DnsNames,
 		Downstream:    in.Downstream,
+		Hint:          in.Hint,
 	}, nil
 }
 

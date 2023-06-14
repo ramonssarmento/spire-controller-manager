@@ -498,6 +498,9 @@ func getOutdatedEntryFields(newEntry, oldEntry spireapi.Entry) []string {
 	if oldEntry.X509SVIDTTL != newEntry.X509SVIDTTL {
 		outdated = append(outdated, "x509SVIDTTL")
 	}
+	if oldEntry.JWTSVIDTTL != newEntry.JWTSVIDTTL {
+		outdated = append(outdated, "jwtSVIDTTL")
+	}
 	if !trustDomainsMatch(oldEntry.FederatesWith, newEntry.FederatesWith) {
 		outdated = append(outdated, "federatesWith")
 	}
@@ -509,6 +512,9 @@ func getOutdatedEntryFields(newEntry, oldEntry spireapi.Entry) []string {
 	}
 	if !stringsMatch(oldEntry.DNSNames, newEntry.DNSNames) {
 		outdated = append(outdated, "dnsNames")
+	}
+	if oldEntry.Hint != newEntry.Hint {
+		outdated = append(outdated, "hint")
 	}
 
 	return outdated
